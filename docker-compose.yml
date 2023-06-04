@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  db:
+    container_name: leading_basic_b_db
+    image: postgres:15
+    platform: linux/amd64
+    volumes:
+      - db_data:/var/lib/postgresql/data/
+    restart: "no"
+    env_file:
+      - ./backend/.env
+
+  backend:
+    container_name: leading_basic_b_backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - type: bind
+        source: ./backend
+        target: /code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+  db_data:
