@@ -15,9 +15,13 @@ loc:
 	@make build
 	@make up
 
-.PHONY: exec
-exec:
+.PHONY: exec-back
+exec-back:
 	docker-compose -f $(COMPOSE) exec backend bash
+
+.PHONY: exec-front
+exec-front:
+	docker-compose -f $(COMPOSE) exec frontend sh
 
 .PHONY: exec-db
 exec-db:

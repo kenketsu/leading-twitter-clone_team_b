@@ -17,7 +17,6 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     platform: linux/amd64
-    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - type: bind
         source: ./backend
@@ -29,6 +28,23 @@ services:
       - ./backend/.env
     depends_on:
       - db
+
+  frontend:
+    container_name: leading_basic_b_frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    platform: linux/amd64
+    volumes:
+      - type: bind
+        source: ./frontend
+        target: /code
+    ports:
+      - "3000:3000"
+    restart: "no"
+    env_file:
+      - ./frontend/.env
+
 
 volumes:
   db_data:
