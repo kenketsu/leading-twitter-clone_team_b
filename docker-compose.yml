@@ -7,6 +7,11 @@ services:
     platform: linux/amd64
     volumes:
       - db_data:/var/lib/postgresql/data/
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
     restart: "no"
     env_file:
       - ./backend/.env
@@ -27,7 +32,9 @@ services:
     env_file:
       - ./backend/.env
     depends_on:
-      - db
+      db:
+        condition: service_healthy
+
 
   frontend:
     container_name: leading_basic_b_frontend
