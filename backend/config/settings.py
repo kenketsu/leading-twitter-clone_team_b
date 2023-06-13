@@ -157,8 +157,4 @@ SIMPLE_JWT = {
     "REFRESH_TOKEN_LIFETIME": timedelta(days=30)
 }
 
-DJOSER = {
-    "LOGIN_FIELD": "email",
-}
-
 CORS_ORIGIN_WHITELIST = env.list("CORS_ORIGIN_WHITELIST")
