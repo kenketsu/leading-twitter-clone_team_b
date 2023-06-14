@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const Header = () => {
+function Header() {
     return(
       <div>
       <Link to='/'>Top</Link>
       <ul>
-      <li><Link to='/daily'>日報</Link></li>
+      <li><Link to='/twitter/pages/Signup.js'>日報</Link></li>
       </ul>
       </div>
     )
-}
+};
+
+export default Header;

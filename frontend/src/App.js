@@ -1,22 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Header } from './Header';
-import { Top } from './Top';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './Header';
+import Top from './Top';
+import Signup from './twitter/pages/Signup';
 
-export const App = () => {
+function App() {
   return(
     <div>
       <Router>
         <Header />
         <div>
-          <Switch>
+          <Routes>
               <Route exact path='/' component={Top} />
-              <Route exact path='/accounts' component={Accounts} />
+              <Route exact path='/accounts' component={Signup} />
               <Route render={() => <h4>not found...</h4>} />
-          </Switch>
+          </Routes>
         </div>
       </Router>
     </div>
   )
-}
+};
 
+export default App;
