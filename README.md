@@ -29,6 +29,8 @@ $ make up
 
 - バックエンド
   - http://localhost:8000
+- APIドキュメント
+  - http://localhost:8000/api/schema/swagger-ui/
 - フロントエンド
   - http://localhost:3000
 
