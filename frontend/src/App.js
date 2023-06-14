@@ -11,9 +11,8 @@ function App() {
         <Header />
         <div>
           <Routes>
-              <Route exact path='/' component={Top} />
-              <Route exact path='/accounts' component={Signup} />
-              <Route render={() => <h4>not found...</h4>} />
+              <Route exact path='/' element={<Top />} />
+              <Route exact path='/Signup' element={<Signup />} />
           </Routes>
         </div>
       </Router>

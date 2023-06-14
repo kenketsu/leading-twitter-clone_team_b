@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Top() {
+function Signup() {
     return(
       <div>
-        <h1>Topです</h1>
+        <h1>sngnupです</h1>
       </div>
     )
 };
 
-export default Top;
+export default Signup;
