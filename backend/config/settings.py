@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "djoser",
     "django_filters",
+    "drf_spectacular",
     # Django
     "django.contrib.admin",
     "django.contrib.auth",
@@ -148,6 +149,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 # ヘッダータイプの指定,アクセストークンの有効期限を30分に設定,リフレッシュトークンの有効期限を7日に設定

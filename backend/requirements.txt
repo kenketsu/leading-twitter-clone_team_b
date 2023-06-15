@@ -9,3 +9,4 @@ django-environ
 black
 flake8
 isort
+drf-spectacular
