@@ -3,7 +3,7 @@ import React from 'react'
 function Top() {
     return(
       <div>
-        <h1>Topです</h1>
+        <h1>TopPage</h1>
       </div>
     )
 };

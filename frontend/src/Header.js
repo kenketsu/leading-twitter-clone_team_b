@@ -6,7 +6,7 @@ function Header() {
       <div>
       <Link to='/'>Top</Link>
       <ul>
-      <li><Link to='/Signup'>日報</Link></li>
+      <li><Link to='/Signup'>SignUpページ</Link></li>
       </ul>
       </div>
     )
