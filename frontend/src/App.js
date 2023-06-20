@@ -5,19 +5,19 @@ import Top from './Top';
 import Signup from './twitter/pages/Signup';
 
 function App() {
-  return(
+  return (
     <div>
       <Router>
         <Header />
         <div>
           <Routes>
-              <Route exact path='/' element={<Top />} />
-              <Route exact path='/Signup' element={<Signup />} />
+            <Route exact path="/" element={<Top />} />
+            <Route exact path="/Signup" element={<Signup />} />
           </Routes>
         </div>
       </Router>
     </div>
-  )
-};
+  );
+}
 
 export default App;

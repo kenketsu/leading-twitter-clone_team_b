@@ -3,17 +3,27 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'airbnb',
-    'prettier',
+  extends: 'airbnb',
+  overrides: [
+    {
+      env: {
+        node: true,
+      },
+      files: [
+        '.eslintrc.{js,cjs}',
+      ],
+      parserOptions: {
+        sourceType: 'script',
+      },
+    },
   ],
-  ignorePatterns: ['build'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
   rules: {
     'react/react-in-jsx-scope': 'off',
-    'react/jsx-filename-extension': ['error', { 'extensions': ['.jsx', '.js'] }]
+    'react/jsx-filename-extension': ['error',
+      { extensions: ['.js', '.jsx'] }],
   },
 };
