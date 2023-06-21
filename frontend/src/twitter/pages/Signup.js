@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-import signUpApi from '../../api/signUpApi'
+import signUpApi from '../../api/accountsApi'
 
 function Signup() {
   const [users, setUsers] = useState([])
