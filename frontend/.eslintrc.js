@@ -3,36 +3,28 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'airbnb',
-    'prettier',
-    'plugin:react/recommended'
-  ],
+  extends: ["airbnb", "prettier", "plugin:react/recommended"],
   overrides: [
     {
       env: {
         node: true,
       },
-      files: [
-        '.eslintrc.{js,cjs}',
-      ],
+      files: [".eslintrc.{js,cjs}"],
       parserOptions: {
-        sourceType: 'script',
+        sourceType: "script",
       },
     },
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
   rules: {
-    'react/react-in-jsx-scope': 'off',
-    'react/jsx-filename-extension': ['error',
-      { extensions: ['.js', '.jsx'] }],
-    'react/function-component-definition': [
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
+    "react/function-component-definition": [
       2,
-      { 'namedComponents': 'arrow-function' }
-    ]
-      
+      { namedComponents: "arrow-function" },
+    ],
   },
 };
