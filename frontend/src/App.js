@@ -4,8 +4,7 @@ import Header from './Header';
 import Top from './Top';
 import Signup from './twitter/pages/Signup';
 
-function App() {
-  return (
+const App = () => (
     <div>
       <Router>
         <Header />
@@ -17,7 +16,6 @@ function App() {
         </div>
       </Router>
     </div>
-  );
-}
+  )
 
 export default App;

@@ -5,7 +5,8 @@ module.exports = {
   },
   extends: [
     'airbnb',
-    'prettier', 
+    'prettier',
+    'plugin:react/recommended'
   ],
   overrides: [
     {
@@ -28,5 +29,10 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': ['error',
       { extensions: ['.js', '.jsx'] }],
+    'react/function-component-definition': [
+      2,
+      { 'namedComponents': 'arrow-function' }
+    ]
+      
   },
 };
