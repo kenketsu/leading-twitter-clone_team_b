@@ -1,11 +1,9 @@
 import React from 'react';
 
-function Top() {
-  return (
+const Top = () => (
     <div>
       <h1>TopPage</h1>
     </div>
-  );
-}
+  )
 
 export default Top;
