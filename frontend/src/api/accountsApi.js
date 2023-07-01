@@ -10,8 +10,12 @@ const signUpApi = {
       password,
       re_password: repassword,
     };
-    const response = await axios.post(`${BASE_URL}/`, data);
-    window.alert("ok!");
+    const response = await axios.post(`${BASE_URL}/`, data, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    console.log(response);
     return response.data;
   },
 };

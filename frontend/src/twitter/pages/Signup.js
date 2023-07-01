@@ -7,30 +7,27 @@ function signup() {
   const [newEmail, setNewEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [newRepassword, setNewRepassword] = useState("");
-  // const [newUser, setNewUser] = useState("");
+  // error
 
-  const addUser = async () => {
+  const addUser = async (e) => {
+    e.preventDefault();
     try {
-      // eslint-disable-next-line no-alert
-      window.alert("ok");
       const user = await signUpApi.createUser(
         newUsername,
         newEmail,
         newPassword,
         newRepassword
       );
-      window.alert("sucsess");
       setUsers([...users, user]); // スプレッド演算子
       setNewUsername("");
       setNewEmail("");
       setNewPassword("");
       setNewRepassword("");
     } catch (error) {
-      // eslint-disable-next-line no-console
       console.error(error);
+      // window.alert(error.response.data.email);
     }
   };
-
   return (
     <main className="form-signup">
       <form>
@@ -45,7 +42,6 @@ function signup() {
             onChange={(e) => setNewUsername(e.target.value)}
             placeholder="ユーザー名"
           />
-          {/* <label>First Name</label> */}
         </div>
 
         <div className="form-floating">
@@ -57,7 +53,6 @@ function signup() {
             onChange={(e) => setNewEmail(e.target.value)}
             placeholder="email"
           />
-          {/* <label>Email address</label> */}
         </div>
 
         <div className="form-floating">
@@ -69,7 +64,6 @@ function signup() {
             onChange={(e) => setNewPassword(e.target.value)}
             placeholder="password"
           />
-          {/* <label>Password</label> */}
         </div>
 
         <div className="form-floating">
@@ -81,7 +75,6 @@ function signup() {
             onChange={(e) => setNewRepassword(e.target.value)}
             placeholder="Re password"
           />
-          {/* <label>Password Confirm</label> */}
         </div>
 
         <button
