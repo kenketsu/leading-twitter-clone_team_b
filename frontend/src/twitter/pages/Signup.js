@@ -14,19 +14,13 @@ function signup() {
   const addUser = async (e) => {
     e.preventDefault();
     try {
-      // eslint-disable-next-line no-console
-      console.log("created!");
       const user = await signUpApi.createUser(
         newUsername,
         newEmail,
         newPassword,
         newRepassword
       );
-      // eslint-disable-next-line no-console
-      console.log("saved!");
       navigate("/home");
-      // eslint-disable-next-line no-console
-      console.log("moved!");
       setUsers([...users, user]); // スプレッド演算子
       setNewUsername("");
       setNewEmail("");

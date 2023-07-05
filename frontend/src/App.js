@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./Header";
-import Top from "./Top";
+import Top from "./twitter/pages/Top";
 import Signup from "./twitter/pages/Signup";
 
 const App = () => (
