@@ -7,7 +7,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 RUN apt update && \
     apt install -y \
-    postgresql-client 
+    postgresql-client
 
 WORKDIR /code
 
