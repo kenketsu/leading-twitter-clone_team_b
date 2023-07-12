@@ -21,6 +21,10 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
+      args:
+        - UID=${UID}
+        - GID=${GID}
+        - USERNAME=${USERNAME}
     platform: linux/amd64
     volumes:
       - type: bind
