@@ -7,7 +7,16 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 RUN apt update && \
     apt install -y \
-    postgresql-client 
+    postgresql-client
+
+ARG UID
+ARG GID
+ARG USERNAME
+
+RUN groupadd -g ${GID} ${USERNAME} \
+      && useradd -u ${UID} -g ${GID} -s /bin/bash -m ${USERNAME}
+
+USER $UID
 
 WORKDIR /code
 

@@ -4,6 +4,9 @@
 
 リポジトリをクローンしたら backend フォルダと frontend フォルダの中で`cp .env.example .env`を実行し、それぞれ.env.sample の内容を.envにコピーしてください。
 
+### 7/12追記
+ルートフォルダでも同じように.example.envを.envにコピーしてください。
+
 ## npm install
 
 リポジトリをクローンした後初めてコンテナを起動する前に frontend ディレクトリで`npm install`を実行してください。

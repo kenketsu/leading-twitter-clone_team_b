@@ -17,7 +17,7 @@ loc:
 
 .PHONY: exec-back
 exec-back:
-	docker-compose -f $(COMPOSE) exec backend bash
+	docker-compose -f $(COMPOSE) exec -u docker-user backend bash
 
 .PHONY: exec-front
 exec-front:
