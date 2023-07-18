@@ -149,10 +149,6 @@ function signup() {
                 autoComplete="current-password"
                 onBlur={(e) => setNewRepassword(e.target.value)}
               />
-              {/* <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              /> */}
               <Button
                 type="submit"
                 fullWidth
