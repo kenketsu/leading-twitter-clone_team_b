@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8000/accounts";
+const BASE_URL = process.env.REACT_APP_API_URL;
 
 const signUpApi = {
   // eslint-disable-next-line camelcase
@@ -12,7 +12,7 @@ const signUpApi = {
       // eslint-disable-next-line camelcase
       re_password,
     };
-    const response = await axios.post(`${BASE_URL}/`, data);
+    const response = await axios.post(`${BASE_URL}/accounts/`, data);
     // eslint-disable-next-line no-console
     console.log(response);
     return response.data;
