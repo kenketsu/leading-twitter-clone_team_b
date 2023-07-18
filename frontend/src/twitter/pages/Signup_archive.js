@@ -41,6 +41,7 @@ function signup() {
           <input
             type="text"
             className="form-control"
+            // eslint-disable-next-line react/no-unknown-property
             autoComplete="username"
             value={newUsername}
             key="username"
@@ -53,6 +54,7 @@ function signup() {
           <input
             type="email"
             className="form-control"
+            // eslint-disable-next-line react/no-unknown-property
             autoComplete="email"
             value={newEmail}
             key="email"
@@ -65,6 +67,7 @@ function signup() {
           <input
             type="password"
             className="form-control"
+            // eslint-disable-next-line react/no-unknown-property
             autoComplete="new-password"
             value={newPassword}
             key="password"
@@ -77,6 +80,7 @@ function signup() {
           <input
             type="password"
             className="form-control"
+            // eslint-disable-next-line react/no-unknown-property
             autoComplete="new-password"
             value={newRepassword}
             key="repassword"
