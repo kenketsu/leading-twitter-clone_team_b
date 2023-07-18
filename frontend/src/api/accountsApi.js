@@ -14,7 +14,6 @@ const signUpApi = {
     };
     const response = await axios.post(`${BASE_URL}/accounts/`, data);
     // eslint-disable-next-line no-console
-    console.log(response);
     return response.data;
   },
 };
