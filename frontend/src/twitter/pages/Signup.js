@@ -4,7 +4,7 @@ import signUpApi from "../../api/accountsApi";
 
 function signup() {
   const [users, setUsers] = useState([]);
-  const [newUsername, setNewUsername] = useState(""); // 初期値として空文字を入れる
+  const [newUsername, setNewUsername] = useState(""); // 初期値として空�?字を入れる
   const [newEmail, setNewEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [newRepassword, setNewRepassword] = useState("");
@@ -21,7 +21,7 @@ function signup() {
         newRepassword
       );
       navigate("/home");
-      setUsers([...users, user]); // スプレッド演算子
+      setUsers([...users, user]); // スプレ�?ド演算�?
       setNewUsername("");
       setNewEmail("");
       setNewPassword("");
@@ -41,10 +41,12 @@ function signup() {
           <input
             type="text"
             className="form-control"
+            // eslint-disable-next-line react/no-unknown-property
+            autoComplete="username"
             value={newUsername}
             key="username"
             onChange={(e) => setNewUsername(e.target.value)}
-            placeholder="ユーザー名"
+            placeholder="ユーザー�?"
           />
         </div>
 
@@ -52,6 +54,8 @@ function signup() {
           <input
             type="email"
             className="form-control"
+            // eslint-disable-next-line react/no-unknown-property
+            autoComplete="email"
             value={newEmail}
             key="email"
             onChange={(e) => setNewEmail(e.target.value)}
@@ -63,6 +67,8 @@ function signup() {
           <input
             type="password"
             className="form-control"
+            // eslint-disable-next-line react/no-unknown-property
+            autoComplete="new-password"
             value={newPassword}
             key="password"
             onChange={(e) => setNewPassword(e.target.value)}
@@ -74,6 +80,8 @@ function signup() {
           <input
             type="password"
             className="form-control"
+            // eslint-disable-next-line react/no-unknown-property
+            autoComplete="new-password"
             value={newRepassword}
             key="repassword"
             onChange={(e) => setNewRepassword(e.target.value)}
